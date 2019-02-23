@@ -15,20 +15,19 @@ function XO(str) {
     var str = str.toLowerCase().split('');
     console.log(str);
     var i = 0;
+    var oCount = 0;
+    var xCount = 0;
     while ( i < str.length) {
-      var oCount = 0;
-      var xCount = 0;
-      
+
         if ( str[i] === 'x' ){
-           var xTotal = xCount++;
+            xCount++;
           }else if ( str[i] === 'o' ){
-              var oTotal = oCount++;
+            oCount++;
           }else {
                 console.log(str[i]); 
           }
-      console.log(oTotal,xTotal);
       i++;
     }
-    if (oTotal === xTotal) {return true;}else {return false;}
+    if (oCount === xCount) {return true;}else {return false;}
     console.log(str);
 }
